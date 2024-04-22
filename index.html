@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
+<head>
     <meta charset = "UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name = "viewport" content = "width=device-width, initial-scale = 1">
+    <title>BOOKLET</title>
     <link rel = "stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" >
     <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>BOOKLET</title>
-    </header>
+
+    </head>
     <style>
         *{
         margin: 0;
@@ -50,24 +51,38 @@
         .about-container {
         flex: 6;
         color: #FFD800;
+        display: flex;
+        justify-content: flex-end;
         }
 
         .about-list {
         display: flex;
+        list-style: none;
+        background-color: black;
+        padding: 0;
+        margin: 0;
         }
 
         .about-list-item {
         display: flex;
         list-style: none;
         background-color: black;
-
+        margin-right: 30px;
+        color: #FFD800;
         }
-        .about-list li:hover{
+
+        .about-list-item li:hover{
         color: white;
         }
 
-        .about-list-item{
+        .about-list-item {
         margin-right: 30px;
+        color: #FFD800;
+        }
+
+        .about-list-item a {
+        text-decoration: none;
+        color: #FFD800;
         }
 
         .sidebar {
@@ -80,7 +95,6 @@
         flex-direction: column;
         align-items: center;
         padding-top: 60px;
-
         }
 
         .sidebar i:hover{
@@ -92,20 +106,30 @@
         font-size: 20px;
         margin-bottom: 70px;
         }
+
         .container{
         background-color: grey;
         min-height: calc(100vh - 50px);
         color: white;
         }
+
         .content-container{
         margin-left: 50px;
-
         }
+
         .featured-content {
         height: 30vh;
         padding: 50px;
         background-color: white;
         }
+
+        .video-frame {
+        transform: rotate(360deg);
+        transform-origin: top left;
+        width: 315px;
+        height: 560px;
+        }
+
         .featured-title{
         width: 130px;
         }
@@ -127,9 +151,13 @@
 
         .booklet-list-container {
         padding: 0 20px;
+        margin-top: 50px;
        }
 
        .booklet-list-wrapper {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
        position: relative;
        }
 
@@ -195,59 +223,56 @@
     </style>
 
 <body>
-<nav>
-        <!--Drawing TOP Navigation-->
-        <div class="navbar">
-            <div class="navbar-container">
-                <div class="logo-container">
-                    <h1 class="logo">BOOKLET</h1>
-                </div>
-                <div class="about-container">
-                    <ul class="about-list">
-                        <li class=" about-list-item ">HOME</li>
-                        <li class=" about-list-item">PUZZLES</li>
-                        <li class="about-list-item">VIDEOS</li>
-                        <li class="about-list-item">READINGS</li>
-                        <li class="about-list-item">NEWS</li>
-
-                    </ul>
-                </div>
-
+<header>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">BOOKLET</h1>
             </div>
+            <ul class="about-list">
+                <li class="about-list-item"><a href="#">HOME</a></li>
+                <li class="about-list-item"><a href="puzzle">PUZZLES</a></li>
+                <li class="about-list-item"><a href="video">VIDEOS</li>
+                <li class="about-list-item"><a href="read">READINGS</a></li>
+                <li class="about-list-item"><a href="news">NEWS</a></li>
+            </ul>
         </div>
-        <div class = "sidebar">
-            <i class="left-menu-icon fa-solid fa-magnifying-glass"></i>
-            <i class="left-menu-icon fa-solid fa-house"></i>
-            <i class="left-menu-icon fa-regular fa-bookmark"></i>
-            <i class="left-menu-icon fa-solid fa-hourglass-end"></i>
-            <i class="left-menu-icon fa-solid fa-cart-shopping"></i>
+    </nav>
+</header>
 
+<aside class="sidebar">
+    <i class="left-menu-icon fa-solid fa-magnifying-glass"></i>
+    <i class="left-menu-icon fa-solid fa-house"></i>
+    <i class="left-menu-icon fa-regular fa-bookmark"></i>
+    <i class="left-menu-icon fa-solid fa-hourglass-end"></i>
+    <i class="left-menu-icon fa-solid fa-cart-shopping"></i>
+</aside>
+
+<section class="container">
+    <div class="content-container">
+        <div class="featured-content">
+            <img class="featured-title" src="img/cats.jpeg" alt="Latest Book">
+            <p class="featured-desc">Read the latest book!</p>
+            <button class="featured-button">READ NOW</button>
         </div>
-        <div class="container">
-            <div class="content-container">
 
-                <div class="featured-content"
-                     style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/ocean.jpeg');">
-                    <img class="featured-title" src="img/cats.jpeg" alt="">
-                    <p class="featured-desc">Read the lastest book!</p>
-                    <button class="featured-button">READ NOW</button>
-                </div>
-                <div class="booklet-list-container">
-                    <h1 class="booklet-list-title">NEW RELEASES</h1>
-                    <div class="booklet-list-wrapper">
-                        <div class="booklet-list">
-                            <div class="booklet-list-item">
-                                <img class="booklet-list-item-img" src="img/turtles.jpeg" alt="">
-                                <span class="booklet-list-item-title">Turtles</span>
-                                <p class="booklet-list-item-desc">about turtles</p>
-                                <button class="booklet-list-item-button">READ</button>
-                            </div>
-                            <div class="booklet-list-item">
-                                <img class="booklet-list-item-img" src="img/elephants.jpeg" alt="">
-                                <span class="booklet-list-item-title">Elephants</span>
-                                <p class="booklet-list-item-desc">about Elephants</p>
-                                <button class="booklet-list-item-button">READ</button>
-                            </div>
+        <div class="booklet-list-container">
+            <h2 class="booklet-list-title">NEW RELEASES</h2>
+            <div class="booklet-list-wrapper">
+                <div class="booklet-list">
+                    <div class="booklet-list">
+                        <div class="booklet-list-item">
+                            <img class="booklet-list-item-img" src="img/turtles.jpeg" alt="Turtles">
+                            <span class="booklet-list-item-title">Turtles</span>
+                            <p class="booklet-list-item-desc">About turtles</p>
+                            <button class="booklet-list-item-button">READ</button>
+                        </div>
+                        <div class="booklet-list-item">
+                            <img class="booklet-list-item-img" src="img/elephants.jpeg" alt="Elephants">
+                            <span class="booklet-list-item-title">Elephants</span>
+                            <p class="booklet-list-item-desc">About elephants</p>
+                            <button class="booklet-list-item-button">READ</button>
+                        </div>
                             <div class="booklet-list-item">
                                 <img class="booklet-list-item-img" src="img/fish.jpeg" alt="">
                                 <span class="booklet-list-item-title">Fish</span>
@@ -266,65 +291,62 @@
                                 <p class="booklet-list-item-desc">about ocean</p>
                                 <button class="booklet-list-item-button">READ</button>
                             </div>
-                    <div class="booklet-list-item">
-                        <img class="booklet-list-item-img" src="img/rex.jpeg" alt="">
-                        <span class="booklet-list-item-title">REX</span>
-                        <p class="booklet-list-item-desc">about rex</p>
-                        <button class="booklet-list-item-button">READ</button>
-
-                    </div>
+                        <div class="booklet-list-item">
+                            <img class="booklet-list-item-img" src="img/rex.jpeg" alt="">
+                            <span class="booklet-list-item-title">REX</span>
+                            <p class="booklet-list-item-desc">about rex</p>
+                            <button class="booklet-list-item-button">READ</button>
+                        </div>
                 </div>
-            <i class="fa-solid fa-angles-right arrow"></i>
+                    <i class="fa-solid fa-angles-right arrow"></i>
+                </div>
+            </div>
+            <div class="booklet-list-container">
+                <h2 class="booklet-list-title">MORE BOOKS</h2>
+                <div class="booklet-list-wrapper">
+                    <div class="booklet-list">
+                        <div class="booklet-list-item">
+                            <img class="booklet-list-item-img" src="img/dog.jpeg" alt="">
+                            <span class="booklet-list-item-title">dog</span>
+                            <p class="booklet-list-item-desc">about dog</p>
+                            <button class="booklet-list-item-button">READ</button>
+                        </div>
+                        <div class="booklet-list-item">
+                            <img class="booklet-list-item-img" src="img/lions.jpeg" alt="">
+                            <span class="booklet-list-item-title">lions</span>
+                            <p class="booklet-list-item-desc">about lion</p>
+                            <button class="booklet-list-item-button">READ</button>
+                        </div>
+                        <div class="booklet-list-item">
+                            <img class="booklet-list-item-img" src="img/tide.jpeg" alt="">
+                            <span class="booklet-list-item-title">tide</span>
+                            <p class="booklet-list-item-desc">about tide</p>
+                            <button class="booklet-list-item-button">READ</button>
+                        </div>
+                        <div class="booklet-list-item">
+                            <img class="booklet-list-item-img" src="img/wcats.jpeg" alt="">
+                            <span class="booklet-list-item-title">wild cats</span>
+                            <p class="booklet-list-item-desc">about wild cats</p>
+                            <button class="booklet-list-item-button">READ</button>
+                        </div>
+                        <div class="booklet-list-item">
+                            <img class="booklet-list-item-img" src="img/armor.jpeg" alt="">
+                            <span class="booklet-list-item-title">armor</span>
+                            <p class="booklet-list-item-desc">about armor</p>
+                            <button class="booklet-list-item-button">READ</button>
+                        </div>
+                        <div class="booklet-list-item">
+                            <img class="booklet-list-item-img" src="img/cats.jpeg" alt="">
+                            <span class="booklet-list-item-title">cats</span>
+                            <p class="booklet-list-item-desc">about cats</p>
+                            <button class="booklet-list-item-button">READ</button>
+                        </div>
+                    <i class="fa-solid fa-angles-right arrow"></i>
+                </div>
+            </div>
         </div>
-    </div>
-        <div class="booklet-list-container">
-            <h1 class="booklet-list-title">MORE BOOKS</h1>
-            <div class="booklet-list-wrapper">
-                <div class="booklet-list">
-                    <div class="booklet-list-item">
-                        <img class="booklet-list-item-img" src="img/dog.jpeg" alt="">
-                        <span class="booklet-list-item-title">dog</span>
-                        <p class="booklet-list-item-desc">about dog</p>
-                        <button class="booklet-list-item-button">READ</button>
-                    </div>
-                    <div class="booklet-list-item">
-                        <img class="booklet-list-item-img" src="img/lions.jpeg" alt="">
-                        <span class="booklet-list-item-title">lions</span>
-                        <p class="booklet-list-item-desc">about lion</p>
-                        <button class="booklet-list-item-button">READ</button>
-                    </div>
-                    <div class="booklet-list-item">
-                        <img class="booklet-list-item-img" src="img/tide.jpeg" alt="">
-                        <span class="booklet-list-item-title">tide</span>
-                        <p class="booklet-list-item-desc">about tide</p>
-                        <button class="booklet-list-item-button">READ</button>
-                    </div>
-                    <div class="booklet-list-item">
-                        <img class="booklet-list-item-img" src="img/wcats.jpeg" alt="">
-                        <span class="booklet-list-item-title">wild cats</span>
-                        <p class="booklet-list-item-desc">about wild cats</p>
-                        <button class="booklet-list-item-button">READ</button>
-                    </div>
-                    <div class="booklet-list-item">
-                        <img class="booklet-list-item-img" src="img/armor.jpeg" alt="">
-                        <span class="booklet-list-item-title">armor</span>
-                        <p class="booklet-list-item-desc">about armor</p>
-                        <button class="booklet-list-item-button">READ</button>
-                    </div>
-                    <div class="booklet-list-item">
-                        <img class="booklet-list-item-img" src="img/cats.jpeg" alt="">
-                        <span class="booklet-list-item-title">cats</span>
-                        <p class="booklet-list-item-desc">about cats</p>
-                        <button class="booklet-list-item-button">READ</button>
+</section>
 
-                    </div>
-                </div>
-                <i class="fa-solid fa-angles-right arrow"></i>
-            </div>
-            </div>
-        <script src="app.js"></script>
-</nav>
+<script src="app.js"></script>
 </body>
-
-
 </html>
